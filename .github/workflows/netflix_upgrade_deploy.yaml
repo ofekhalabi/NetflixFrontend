@@ -18,6 +18,7 @@ jobs:
           DOCKERHUB_USERNAME=${{ secrets.DOCKERHUB_USERNAME }}
           DOCKERHUB_PASSWORD=${{ secrets.DOCKERHUB_PASSWORD }}
           
+          
           if [[ -z DOCKERHUB_USERNAME ]] || [[ -z DOCKERHUB_PASSWORD ]]; then
             echo DOCKERHUB_USERNAME and DOCKERHUB_PASSWORD secrets should be configured
             exit 1
