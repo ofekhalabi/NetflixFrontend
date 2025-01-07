@@ -47,7 +47,7 @@ jobs:
           cd ./NetflixInfra/k8s/NetflixFrontend
           DOCKERHUB_USERNAME=${{ secrets.DOCKERHUB_USERNAME }}
           IMAGE_NAME=$DOCKERHUB_USERNAME/netflix-frontend:${{ github.run_number }}
-          yq e '.spec.template.spec.containers[0].image = "$IMAGE_NAME"' -i deployment.yaml
+          yq e ".spec.template.spec.containers[0].image = \"$IMAGE_NAME\"" -i deployment.yaml
 
       - name: Commit and Push changes
         run: |
