@@ -45,7 +45,7 @@ jobs:
       - name: Update YAML manifests
         run: |
           cd ./NetflixInfra/k8s/NetflixFrontend
-          DOCKERHUB_USERNAME= ${{ secrets.DOCKERHUB_USERNAME }}
+          DOCKERHUB_USERNAME=${{ secrets.DOCKERHUB_USERNAME }}
           IMAGE_NAME=$DOCKERHUB_USERNAME/netflix-frontend:${{ github.run_number }}
           yq e ".spec.template.spec.containers.image = \"$IMAGE_NAME\"" -i deployment.yaml
 
