@@ -29,7 +29,6 @@ Thus, you have to run the NetflixMovieCatalog app first and define the service's
 export MOVIE_CATALOG_SERVICE=http://localhost:8080
 ```
 
-
 Start the Netflix Frontend app by:
 ```bash
 npm start
