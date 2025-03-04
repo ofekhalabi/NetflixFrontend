@@ -1,7 +1,9 @@
 // pipelines/build.Jenkinsfile
 
 pipeline {
-    agent any
+    agent {
+        'general'
+    }
 
     triggers {
         githubPush()
