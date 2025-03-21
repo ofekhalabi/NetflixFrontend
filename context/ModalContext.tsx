@@ -1,6 +1,7 @@
 import React, { createContext, useState } from 'react';
 import { Media } from '../types';
 
+
 interface Modal {
   modalData: Media;
   setModalData: (item: Media) => void;
