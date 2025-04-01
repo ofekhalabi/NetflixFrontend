@@ -1,5 +1,7 @@
 pipeline {
-    agent any
+    agent {
+        label 'general'
+    }
 
     stages {
         stage('Tests before build') {
@@ -11,7 +13,15 @@ pipeline {
              }
              stage('Lint') {
                  steps {
-                     sh 'echo linting...'
+                     sh '''
+                        docker build -t lint-test-img .
+                        docker run lint-test-img npm run lint
+                     '''
+                 }
+                 post {
+                    always {
+                        sh 'docker image rm lint-test-img || true'
+                    }
                  }
              }
             }
