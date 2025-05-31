@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "aws-sdk": "^2.1632.0",
+    "aws-sdk": "^2.1692.0",
     "axios": "^0.21.1",
     "cookie": "^0.6.0",
     "env-var": "^7.0.1",
