@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "aws-sdk": "^2.1632.0",
-    "axios": "^0.21.1",
+    "axios": "^0.30.0",
     "cookie": "^0.6.0",
     "env-var": "^7.0.1",
     "framer-motion": "^4.1.17",
